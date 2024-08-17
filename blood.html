@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Shop and Blood Donate Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/img/medicine.jpg" type="image/x-icon" />
+</head>
+<style>
+    h2 {
+        color: white;
+    }
+
+    footer {
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <input style="margin-left: 1069px; margin-top: 16px;" type="search" id="search" value="" onchange="ouvrirPage()"
+            placeholder="Type here something">
+        <input type="button" id="button" onclick="ouvrirPage()" value="Search" style="margin-left:-4px;">
+    </div>
+    <input type="checkbox" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner top"></div>
+        <div class="spinner middle"></div>
+        <div class="spinner bottom"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#">Profile</a></li> -->
+            <li><a href="#">login</a></li>
+            <li style="height: 75px;"><a href="blood.html">Bload Bank</a>
+                <ul>
+                    <li><a href="help.html">Contact Help Center</a></li>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Physiotheraphy</a></li>
+            <li><a href="Product.html">Products</a></li>
+            <li><a href="help.html">Help & Support</a></li>
+            <li><a href="https://www.instagram.com/mdaarif.raza16/">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Medical Shop and Blood Bank</h1>
+        <!-- This only for selectin area  start this select tag -->
+        <select name="car" id="state-select">Select your State
+            <option value="no car">Select your State</option>
+            <option value="option">Bihar</option>
+            <option value="option">Madhy Pardesh</option>
+            <option value="option">Utter Pardesh</option>
+            <option value="option">Maharastra</option>
+            <option value="option">Meghalya</option>
+            <option value="option">Sikkim</option>
+            <option value="option">Goa</option>
+            <option value="option">Arunachal Pardish</option>
+            <option value="option">Aandhara Pardesh</option>
+            <option value="option">Rajasthan</option>
+            <option value="option">Manipur</option>
+            <option value="option">Punjab</option>
+            <option value="option">Hariyana</option>
+            <option value="option">TamilNadu</option>
+            <option value="option">Chattishgarh</option>
+            <option value="option">Telangana</option>
+            <option value="option">Odisha</option>
+            <option value="option">Jammu & Kashmir</option>
+            <option value="option">Himachal Pardesh</option>
+            <option value="option">Nagaland</option>
+            <option value="option">Assam</option>
+            <option value="option">Keral</option>
+            <option value="option">Gujrat</option>
+            <option value="option">West Bangal</option>
+            <option value="option">Karnataka</option>
+            <option value="option">Dehli</option>
+        </select>
+        <!-- end this tag -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+        <div class="container my-4">
+
+            <div class="form-group">
+                <label for="title">NAME</label>
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Add Name the list</small>
+            </div>
+            <!-- new -->
+            <div class="form-group">
+                <label for="name">Blood Group</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Add Blood Group the list</small>
+            </div>
+            <div class="form-group">
+                <label for="number">Mobile Number</label>
+                <input type="text" class="form-control" id="number" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Add Mobile Number in the list</small>
+            </div>
+
+            <div class="form-group">
+                <label for="E-Mail">E-Mail</label>
+                <input type="text" class="form-control" id="E-Mail" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Add E-Mail in the list</small>
+            </div>
+
+            <div class="form-group">
+                <label for="BloodDonate">If You Donate Blood Writte "YES" If You requred Blood Writte "No"</label>
+                <input type="text" class="form-control" id="BloodDonate" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Add YES/NO in the list</small>
+            </div>
+
+            <!-- end -->
+            <div class="form-group">
+                <label for="description">Address</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+
+            <!-- if clear all element this open this other wise no -->
+            <button id="add" class="btn btn-primary">Submit</button>
+            <!-- <button id="clear" class="btn btn-primary" onclick="clearStorage()">Clear list</button> -->
+
+
+            <div id="items" class="my-4">
+                <h2>Members of Blood Donated person Details</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">SNo</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Blood Group</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">Yes/No</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Get some Coffee</td>
+                            <td>You need coffee as you are a coder</td>
+                            <td><button class="btn btn-sm btn-primary">Delete</button></td>
+                            <!-- <button id="clear" class="btn btn-primary" onclick="clearStorage()">Delete</button> -->
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+
+        <script>
+
+
+            function getAndUpdate() {
+                console.log("Updating List...");
+                tit = document.getElementById('title').value;
+                desc = document.getElementById('description').value;
+                na = document.getElementById('name').value;
+                nu = document.getElementById('number').value;
+                E = document.getElementById('E-Mail').value;
+                Blood = document.getElementById('BloodDonate').value;
+                if (localStorage.getItem('itemsJson') == null) {
+                    itemJsonArray = [];
+                    itemJsonArray.push([tit, desc, na, nu, E, Blood]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                else {
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                    itemJsonArray.push([tit, desc, na, nu, E, Blood]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                update();
+            }
+
+            function update() {
+                if (localStorage.getItem('itemsJson') == null) {
+                    itemJsonArray = [];
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                else {
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                }
+                // Populate the table
+                let tableBody = document.getElementById("tableBody");
+                let str = "";
+                itemJsonArray.forEach((element, index) => {
+                    str += `
+                    <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${element[0]}</td>
+                    <td>${element[1]}</td> 
+                    <td>${element[2]}</td> 
+                    <td>${element[3]}</td>                  
+                    <td>${element[4]}</td>                  
+                    <td>${element[5]}</td>                                   
+                    <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td> 
+                    </tr>`;
+                });
+                tableBody.innerHTML = str;
+            }
+            add = document.getElementById("add");
+            add.addEventListener("click", getAndUpdate);
+            update();
+            // **********************if you not delete that item then open this function*********************************
+            // function deleted(itemIndex) {
+            //     var password;
+            //     if (password==1234) {
+            //         console.log("Delete", itemIndex);
+            //         itemJsonArrayStr = localStorage.getItem('itemsJson')
+            //         itemJsonArray = JSON.parse(itemJsonArrayStr);
+            //         // Delete itemIndex element from the array
+            //         itemJsonArray.splice(itemIndex, 1);
+            //         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            //         update();
+            //     }
+            // }
+            // *************************if you delete that itme then open this function*******************************
+            function deleted(itemIndex) {
+                if (confirm) {
+                    console.log("Delete", itemIndex);
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                    // Delete itemIndex element from the array
+                    itemJsonArray.splice(itemIndex, 1);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+                    update();
+                }
+            }
+        // ***************************if you all clear then open this function**************************************
+        // function clearStorage() {
+        //     if (confirm("Do you really want to clear?")) {
+        //         console.log('Clearing the storage')
+        //         localStorage.clear();
+        //         update()
+        //     }
+        // }
+        </script>
+
+    </div>
+
+
+    <div class="cleaner"></div>
+    </div>
+    <div class="content_box_bottom"></div>
+
+    </div> <!-- end of content -->
+
+    <div class="cleaner"></div>
+
+    </div>
+
+    </div>
+    <footer>
+        <center>
+            <h2 style="font-size:27px;">Welcome to Our Company</h2>
+        </center>
+        <div class="wrapper">
+            <div class="left">
+                <h2 style="font-size:20px;">COMPANY NAME</h2>
+                Here you can use row and colomns to organize your footer
+            </div>
+            <div class="right">
+                <h2 style="font-size:20px;">PRODUCT</h2>
+                <span>Opreting System</span><br>
+                <span>C</span><br>
+                <span>C++</span> <br>
+            </div>
+            <div class="third">
+                <h2 style="font-size:20px;">USUEFULL LINK</h2>
+                <a href="https://www.instagram.com/mdaarif.raza16/"><img src="img/insta.webp" alt="" width="27px"></a>
+                <a href="https://m.facebook.com/mdaarif.raza.16?ref=bookmarks"><img src="img/facebook.png" alt=""
+                        width="27px"></a>
+                <a href="https://www.linkedin.com/in/md-aarif-raza-5a9656224/"><img src="img/linkdin.png" alt=""
+                        width="27px"></a>
+                <a href="https://twitter.com/MdAarif20460801"><img src="img/twiteer.png" alt="" width="27px"></a>
+                <a href="https://www.youtube.com/channel/UCvoZD9jJ1ItuM9IYsy96UvQ"><img src="img/youtoobe.webp" alt=""
+                        width="38px"></a>
+
+            </div>
+            <div class="fourth">
+                <h2 style="font-size:20px;">CONTACT</h2>
+                <span>E-Mail: mdaarifraza03@gmail.com</span><br>
+                <span>Contact Number: 9973611892</span><br>
+                <span>Addres: Darbhanga Bihar</span><br>
+            </div>
+
+        </div>
+    </footer>
+    <script src="search.js"></script>
+</body>
+
+</html>
